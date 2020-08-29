@@ -76,28 +76,20 @@ $ws_page = pages()->get('/web-settings/');
 		<pw-region id="page-content">
 		</pw-region>
 
-		<!-- phần order mẫu free -->
-
-		<!--Đặt mẫu uk section đã ở trong-->
-		<?php
-		//Id="order-sample"
-		echo files()->include('views/template-parts/_order-sample.php', ['imageUrl' => "", 'ukMutedText' => '']);
-		//Id="sign-up-newsletter"
-		//echo files()->include('views/template-parts/_sign-up-newsletters.php');
-		?>
-		<section id="sign-up-newsletter" pw-optional class="uk-section uk-padding-remove uk-background-muted">
-		<div class="uk-container" data-uk-scrollspy="target: > div div; cls:uk-animation-slide-bottom-small; delay: 300;">
-			<div class="tw-element tw-call-action uk-padding-remove">
-				<div class="call-content">
-					<h2>Đăng Ký Nhận Bản Tin</h2>
-					<p>Chúng tôi sẽ gởi bản tin hàng tháng cho bạn</p>
+		<!-- Đăng ký nhận tin -->
+	<section id="sign-up-newsletter" pw-optional class="uk-section uk-padding-remove uk-background-muted">
+			<div class="uk-container" data-uk-scrollspy="target: > div div; cls:uk-animation-slide-bottom-small; delay: 300;">
+				<div class="tw-element tw-call-action uk-padding-remove">
+					<div class="call-content">
+						<h2>Đăng Ký Nhận Bản Tin</h2>
+						<p>Chúng tôi sẽ gởi bản tin hàng tháng cho bạn</p>
+					</div>
+					<div class="call-btn">
+						<?php include('./promailer-subscribe.php');	?>
+					</div>
 				</div>
-				<div class="call-btn">
-					<?php include('./promailer-subscribe.php');	?>
-				</div>
-			</div>
-    </div>
-</section>
+		</div>
+	</section>
 		<!-- phần sign up newsletter p END -->
 		<!-- FOOTER -->
 		<footer id='footer' class="uk-section uk-padding-remove-vertical uk-light" style="background-color: #222222;">
