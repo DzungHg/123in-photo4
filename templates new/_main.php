@@ -19,7 +19,7 @@ if (page()->images && count(page()->images)) {
 $navMenuClassText = "";
 $templateName = $page->template;
 switch ($templateName) {
-	case "biz_card-product":
+	case "product":
 		$navMenuClassText = "header-container tw-header";
 		break;
 	case "flyer-product":
@@ -77,7 +77,7 @@ $ws_page = pages()->get('/web-settings/');
 		</pw-region>
 
 		<!-- Đăng ký nhận tin -->
-	<section id="sign-up-newsletter" pw-optional class="uk-section uk-padding-remove uk-background-muted">
+		<section id="sign-up-newsletter" pw-optional class="uk-section uk-padding-remove uk-background-muted">
 			<div class="uk-container" data-uk-scrollspy="target: > div div; cls:uk-animation-slide-bottom-small; delay: 300;">
 				<div class="tw-element tw-call-action uk-padding-remove">
 					<div class="call-content">
@@ -88,8 +88,8 @@ $ws_page = pages()->get('/web-settings/');
 						<?php include('./promailer-subscribe.php');	?>
 					</div>
 				</div>
-		</div>
-	</section>
+			</div>
+		</section>
 		<!-- phần sign up newsletter p END -->
 		<!-- FOOTER -->
 		<footer id='footer' class="uk-section uk-padding-remove-vertical uk-light" style="background-color: #222222;">
@@ -139,7 +139,7 @@ $ws_page = pages()->get('/web-settings/');
 
 	<?php
 	// echo googleFonts( ['fonts' => ['Nunito:200,600','Butcherman']] ); // Google Fonts
-		echo gaCode( setting('ga-code') ); // Google Analytics
+	echo gaCode(setting('ga-code')); // Google Analytics
 	?>
 	<!-- .main-container close -->
 	<script src="<?= $urls->templates ?>assets/js/jquery-3.2.0.min.js"></script>

@@ -1,4 +1,6 @@
-<?php namespace ProcessWire;
+<?php
+
+namespace ProcessWire;
 
 
 ?>
@@ -6,26 +8,12 @@
     <!-- head image and cubersome END -->
     <?= files()->render('views/template-parts/_basic-page-header.php') ?>
     <!-- head image and cubersome -->
-<!-- tất cả sản phẩm  -->
-<section class="uk-section">
-    
-    <div class="uk-container">
-        <!-- item sản phẩm  -->
-        <?= files()->render('views/products-parts/_products-prod-type-items.php')?>
-    </div>
+    <!-- tất cả sản phẩm  -->
 
-</section>
-<!-- tất cả sản phẩm HẾT  -->
+    <?= files()->render('views/product-type-parts/_prod-type-products.php') ?>
 
-<!-- Các sản phẩm được ưa thích  -->
-<section class="uk-section uk-section-muted">
-    
-    <div class="uk-container">
-        <!-- item sản phẩm  -->
-        <?= files()->render('views/products-parts/_products-favourite-products.php')?>
-    </div>
+    <!-- tất cả sản phẩm HẾT  -->
 
-</section>
-<!-- Các sản phẩm được ưa thích  HẾT  -->
+
 
 </pw-region>

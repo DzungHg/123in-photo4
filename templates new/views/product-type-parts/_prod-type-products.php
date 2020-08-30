@@ -2,16 +2,16 @@
 
 namespace ProcessWire;
 //Tìm sản phẩm poplular 4 cái nhưng không được sticky to font vì nó đã trưng ra rồi.
-$popProducts = pages()->find("popular_product_type=1, sticky_to_home_page=0, limit=4");
+$popProducts = $page->children();
 ?>
-<section class="uk-section uk-background-cover" style="background-color: #f7f7f7;">
+<section class="uk-section">
     <div class="uk-container">
         <div class="tw-element tw-heading uk-text-center">
             <h3>
-                <?= $page->home_popular_product_block->title ?>
+                <?= $page->prod_type_product_block->title ?>
             </h3>
             <p class="subtitle">
-                <?= $page->home_popular_product_block->description ?>
+                <?= $page->prod_type_product_block->description ?>
             </p>
         </div>
         <div class="tw-element uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid data-uk-scrollspy="target: > div; cls:uk-animation-slide-top-medium; delay: 300;">

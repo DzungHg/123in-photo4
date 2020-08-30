@@ -6,7 +6,7 @@
     <meta name="description" content="Site Description Here" />
     <link rel="shortcut icon" href="assets/images/favicon.png" />
 
-    <title>Shop Single | Lovely Corporate Responsive HTML Theme</title>
+    <title>Highlight | Lovely Corporate Responsive HTML Theme</title>
 
     <link
       href="assets/css/uikit.min.css"
@@ -63,7 +63,7 @@
   </head>
   <body class="loading">
     <div class="tw-preloader"><div data-uk-spinner></div></div>
-    <div class="header-container tw-header">
+    <div class="header-container tw-header tw-header-transparent uk-light">
       <nav class="uk-navbar-container uk-flex-center" data-uk-navbar>
         <div class="uk-navbar-left">
           <div class="tw-logo">
@@ -255,9 +255,7 @@
                     </div>
                     <div>
                       <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li>
-                          <a href="elements-highlight.html">Highlights</a>
-                        </li>
+                        <li class="uk-active"><a href="#">Highlights</a></li>
                         <li><a href="elements-box.html">Iconbox</a></li>
                         <li><a href="elements-infobox.html">Infobox</a></li>
                         <li><a href="elements-list.html">Lists</a></li>
@@ -394,7 +392,7 @@
                 <li><a href="shop.html">Default Shop</a></li>
                 <li><a href="shop-cart.html">Cart</a></li>
                 <li><a href="shop-checkout.html">Checkout</a></li>
-                <li class="uk-active"><a href="#">Single</a></li>
+                <li><a href="shop-single.html">Single</a></li>
               </ul>
             </li>
           </ul>
@@ -407,7 +405,7 @@
               data-uk-toggle
               ><i class="ion-ios-search-strong"></i
             ></a>
-            <a class="cart-btn uk-navbar-toggle" href="#"
+            <a class="cart-btn uk-light uk-navbar-toggle" href="#"
               ><i class="ion-bag"><span>3</span></i></a
             >
             <div
@@ -740,7 +738,7 @@
                       >
                     </li>
                     <li><a href="elements-heading.html">Heading</a></li>
-                    <li><a href="elements-highlight.html">Highlights</a></li>
+                    <li class="uk-active"><a href="#">Highlights</a></li>
                     <li><a href="elements-box.html">Iconbox</a></li>
                     <li><a href="elements-infobox.html">Infobox</a></li>
                     <li><a href="elements-list.html">Lists</a></li>
@@ -821,7 +819,7 @@
                     <li><a href="shop.html">Default Shop</a></li>
                     <li><a href="shop-cart.html">Cart</a></li>
                     <li><a href="shop-checkout.html">Checkout</a></li>
-                    <li class="uk-active"><a href="#">Single</a></li>
+                    <li><a href="shop-single.html">Single</a></li>
                   </ul>
                 </li>
               </ul>
@@ -838,859 +836,153 @@
     </div>
     <!-- .main-container close -->
     <div class="main-container">
-      <section class="uk-section uk-section-shop">
-        <div class="uk-container">
-          <div class="uk-child-width-1-1@l uk-child-width-1-1@m" data-uk-grid>
-            <div>
-              <div class="uk-grid-collapse" data-uk-grid>
-                <div class="uk-width-single image-slide-area">
-                  <div class="thumbs owl-carousel owl-theme">
-                    <img src="assets/demo/shop/slider-small-1.jpg" alt="" />
-                    <img src="assets/demo/shop/slider-small-2.jpg" alt="" />
-                    <img src="assets/demo/shop/slider-small-3.jpg" alt="" />
-                    <img src="assets/demo/shop/slider-small-4.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="uk-width-expand">
-                  <div
-                    class="uk-margin-left big-images onhover owl-carousel owl-theme"
-                  >
-                    <img src="assets/demo/900x590.jpg" alt="" />
-                    <img src="assets/demo/900x590.jpg" alt="" />
-                    <img src="assets/demo/900x590.jpg" alt="" />
-                    <img src="assets/demo/900x590.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section
+        class="uk-section uk-text-center uk-flex uk-flex-middle uk-flex-center uk-light uk-background-cover uk-background-top-center"
+        data-overlay="0.4"
+        style="
+          background-color: #151515;
+          background-image: url(assets/demo/elements-bg.jpg);
+          height: 500px;
+        "
+      >
+        <div
+          class="tw-page-title-container tw-element"
+          data-uk-parallax="opacity: 1,0.5; viewport: 0.5"
+        >
+          <h1 class="tw-page-title uk-text-uppercase">Highlight</h1>
+        </div>
+        <div
+          class="tw-breadcrumb-container uk-position-absolute uk-position-bottom-center tw-element"
+        >
+          <a href="index.html" class="tw-breadrumb-child home">Home</a>
+          <a href="#" class="tw-breadrumb-child">Elements</a>
+          <a href="#" class="tw-breadrumb-child">Highlight</a>
         </div>
       </section>
-      <div class="tw-element tw-tab">
-        <ul
-          class="uk-flex-center"
-          data-uk-tab="connect: #uk-switch-3; animation: uk-animation-slide-bottom-medium;"
-        >
-          <li><a href="#">Description</a></li>
-          <li><a href="#">Additional Information</a></li>
-          <li><a href="#">Reviews (2)</a></li>
-        </ul>
-        <section
-          class="uk-section uk-padding-remove-vertical uk-margin-large-bottom"
-        >
-          <div class="uk-container">
-            <ul id="uk-switch-3" class="uk-switcher">
-              <li>
-                <div
-                  class="uk-child-width-1-1@s uk-margin-large-top"
-                  data-uk-grid
-                  data-uk-scrollspy="target: > div;cls:uk-animation-slide-bottom-medium; delay: 200"
+      <section class="uk-section">
+        <div class="uk-container uk-container-small">
+          <div
+            data-uk-grid
+            data-uk-scrollspy="target: > div; cls:uk-animation-slide-bottom-medium; delay: 400;"
+          >
+            <div class="uk-width-1-1">
+              <p>
+                Duis sed odio sit amet nibh vulputate cursus sit amet mauris
+                morbi accumsan ipsum velit nam nec tellus
+                <span
+                  class="tw-element tw-highlight"
+                  data-uk-scrollspy="cls:uk-animation-fade; delay: 200"
+                  >tincidunt maximus ligula semper metus auctor ornare</span
                 >
-                  <div>
-                    <div class="tw-element tw-box">
-                      <h4>Product Description</h4>
-                      <p>
-                        Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra per inceptos himenaeos mauris in erat
-                        justo nullam ac sed odio sit amet tincidunt auctor
-                        ornare odio sed non mauris urna felis dapibus
-                        condimentum sit amet augue sed non. Eque elit sed ut
-                        imperdiet velit nam nec tellus tincidunt auctor ornare
-                        odio sed nonero consequat auctor nisi proin condim entum
-                        fermentum nunc etiam pharetra erat sed fermentu feugiat
-                        velit mauris egestas quam ut aliquam massa nisl quis
-                        neque. Mirum est notare quam littera gothica, quam nunc
-                        putamus parum claram, anteposuerit litterarum formas
-                        humanitatis per seacula quarta decima et quinta decima.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="uk-child-width-1-1@s uk-margin-large-top"
-                  data-uk-grid
+                odio sed non consequat auctor. Lorem Ipsum proin gravida auctor
+                donec vel ultricies purus sociosqu sollicitudin lorem quis
+                bibendum auctor consequat ipsum nec sagittis sem.
+              </p>
+              <p>
+                Lorem Ipsum proin gravida nibh vel velit auctor aliquet aenean
+                sociosqu sollicitudin lorem quis bibendum auctor nisi elit
+                dorest consequat ipsum nec sagittis elit. Duis sed odio sit amet
+                tincidunt auctor ornare odio sed non mauris vitae erat consequat
+                auctor.
+              </p>
+            </div>
+            <div class="uk-width-1-1">
+              <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra per inceptos himenaeos mauris in erat justo nullam ac
+                urna felis
+                <span
+                  class="tw-element tw-highlight"
+                  style="background: #151515; color: #fff"
+                  data-uk-scrollspy="cls:uk-animation-fade; delay: 400"
+                  >dapibus condimentum sit amet augue sed non. Neque elit sed ut
+                  imperdiet nisi proin condimentum</span
                 >
-                  <div>
-                    <div class="tw-element tw-table">
-                      <table
-                        class="uk-table uk-margin-auto uk-width-1-3 with-border"
-                      >
-                        <tbody>
-                          <tr>
-                            <th>Color</th>
-                            <td>Black, Blue, Green</td>
-                          </tr>
-                          <tr class="">
-                            <th>Weight</th>
-                            <td class="product_weight">2 kg</td>
-                          </tr>
-                          <tr>
-                            <th>Dimensions</th>
-                            <td>30 x 40 x 20 cm</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  class="uk-child-width-1-1@s uk-margin-large-top"
-                  data-uk-grid
-                  data-uk-scrollspy="target: > div;cls:uk-animation-slide-bottom-medium; delay: 200"
+                fermentum nunc etiam pharetra erat sed fermentu feugiat velit
+                mauris egestas quam ut aliquam massa nisl quis neque.
+              </p>
+              <p>
+                Duis sed odio sit amet nibh vulputate cursus sit amet mauris
+                morbi accumsan ipsum velit nam nec tellus tincidunt maximus
+                ligula semper metus auctor ornare odio sed non consequat auctor.
+                Lorem Ipsum proin gravida auctor donec vel ultricies purus
+                sociosqu sollicitudin lorem quis bibendum auctor consequat ipsum
+                nec sagittis sem.
+              </p>
+            </div>
+            <div class="uk-width-1-1">
+              <p>
+                Lorem Ipsum proin gravida nibh vel velit auctor aliquet
+                <span
+                  class="tw-element tw-highlight"
+                  style="background: #f95f50; color: #fff"
+                  data-uk-scrollspy="cls:uk-animation-fade; delay: 600"
+                  >aenean sociosqu sollicitudin lorem quis bibendum auctor nisi
+                  elit dorest consequat</span
                 >
-                  <div>
-                    <div class="entry-comments tw-contact-form">
-                      <div class="comment-list clearfix">
-                        <div class="comment">
-                          <div class="comment-author">
-                            <img
-                              src="assets/demo/author/author-1.png"
-                              alt=""
-                              class="avatar"
-                            />
-                          </div>
-                          <div class="comment-text tw-border-none">
-                            <h3 class="author"><a href="#">John Doe</a></h3>
-                            <span class="tw-meta">January 18, 2016</span>
-                            <p>
-                              Completely synergize resource taxing relationships
-                              via premier niche markets. Professionally
-                              cultivate one-to-one customer service with robust
-                              ideas.
-                            </p>
-                            <p class="tw-meta reply">
-                              <a class="comment-reply-link" href="#">Reply</a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="comment-respond">
-                        <div class="comment-title">
-                          <h4>Add Review</h4>
-                        </div>
-                        <form
-                          action="#"
-                          method="post"
-                          id="commentform"
-                          class="comment-form tw-form-style-1"
-                        >
-                          <p class="comment-form-comment">
-                            <textarea
-                              name="comment"
-                              placeholder="Your Review"
-                              id="comment"
-                              class="required"
-                              rows="7"
-                              tabindex="4"
-                            ></textarea>
-                          </p>
-                          <p class="comment-form-author">
-                            <input
-                              id="author"
-                              name="author"
-                              placeholder="Name *"
-                              type="text"
-                              value=""
-                              size="30"
-                              aria-required="true"
-                            />
-                          </p>
-                          <p class="comment-form-email">
-                            <input
-                              id="email"
-                              name="email"
-                              placeholder="Email *"
-                              type="text"
-                              value=""
-                              size="30"
-                              aria-required="true"
-                            />
-                          </p>
-                          <div class="clearfix"></div>
-                          <p class="form-submit">
-                            <input
-                              name="submit"
-                              type="submit"
-                              id="submit"
-                              class="submit"
-                              value="Submit Review"
-                            />
-                          </p>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-      <hr />
-      <section class="uk-section uk-section-small uk-margin-medium-bottom">
-        <div class="uk-container">
-          <div class="tw-element tw-heading uk-text-center">
-            <h3>Related Products</h3>
-          </div>
-          <div class="tw-element tw-shop">
-            <div
-              class="shop-container uk-child-width-1-1@xxs uk-child-width-1-2@xs uk-child-width-1-3@s uk-child-width-1-4@m"
-              data-uk-grid
-              data-uk-scrollspy="target: .shop-item; cls:uk-animation-slide-bottom-medium; delay: 300;"
-            >
-              <div>
-                <div class="shop-item">
-                  <div class="shop-content">
-                    <div
-                      class="shop-image-container uk-inline tw-onhover visible"
-                    >
-                      <img
-                        alt="Backpack In Black"
-                        src="assets/demo/shop/product-1.jpg"
-                      />
-                      <div class="uk-position-bottom">
-                        <a class="add-to-cart"
-                          ><i class="icon ion-bag"></i>Add to Cart</a
-                        >
-                      </div>
-                    </div>
-                    <h4>
-                      <a href="shop-single.html" class="shop-title"
-                        >Backpack In Black</a
-                      >
-                    </h4>
-                    <a class="shop-category">Accessories</a>
-                    <div class="price">
-                      <span class="old-price">$26.00</span>
-                      <span class="new-price">$28.00</span>
-                      <div class="shop-rating-container uk-clearfix">
-                        <fieldset class="rating">
-                          <input
-                            type="radio"
-                            id="star5"
-                            name="rating"
-                            value="5"
-                          /><label
-                            class="full"
-                            for="star5"
-                            title="Awesome - 5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4half"
-                            name="rating"
-                            value="4 and a half"
-                          /><label
-                            class="half"
-                            for="star4half"
-                            title="Pretty good - 4.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4"
-                            name="rating"
-                            value="4"
-                          /><label
-                            class="full"
-                            for="star4"
-                            title="Pretty good - 4 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3half"
-                            name="rating"
-                            value="3 and a half"
-                          /><label
-                            class="half"
-                            for="star3half"
-                            title="Meh - 3.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3"
-                            name="rating"
-                            value="3"
-                          /><label
-                            class="full"
-                            for="star3"
-                            title="Meh - 3 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2half"
-                            name="rating"
-                            value="2 and a half"
-                          /><label
-                            class="half"
-                            for="star2half"
-                            title="Kinda bad - 2.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2"
-                            name="rating"
-                            value="2"
-                          /><label
-                            class="full"
-                            for="star2"
-                            title="Kinda bad - 2 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1half"
-                            name="rating"
-                            value="1 and a half"
-                          /><label
-                            class="half"
-                            for="star1half"
-                            title="Meh - 1.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1"
-                            name="rating"
-                            value="1"
-                          /><label
-                            class="full"
-                            for="star1"
-                            title="Sucks big time - 1 star"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="starhalf"
-                            name="rating"
-                            value="half"
-                          /><label
-                            class="half"
-                            for="starhalf"
-                            title="Sucks big time - 0.5 stars"
-                          ></label>
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="shop-item">
-                  <div class="shop-content">
-                    <div
-                      class="shop-image-container uk-inline tw-onhover visible"
-                    >
-                      <img
-                        alt="Backpack In Black"
-                        src="assets/demo/shop/product-2.jpg"
-                      />
-                      <div class="uk-position-bottom">
-                        <a class="add-to-cart"
-                          ><i class="icon ion-bag"></i>Add to Cart</a
-                        >
-                      </div>
-                    </div>
-                    <h4>
-                      <a href="shop-single.html" class="shop-title"
-                        >BOSS Orange T-Shirt</a
-                      >
-                    </h4>
-                    <a class="shop-category">Clothing, Man</a>
-                    <div class="price">
-                      <span class="new-price">$40.00</span>
-                      <div class="shop-rating-container uk-clearfix">
-                        <fieldset class="rating">
-                          <input
-                            type="radio"
-                            id="star5"
-                            name="rating"
-                            value="5"
-                          /><label
-                            class="full"
-                            for="star5"
-                            title="Awesome - 5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4half"
-                            name="rating"
-                            value="4 and a half"
-                          /><label
-                            class="half"
-                            for="star4half"
-                            title="Pretty good - 4.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4"
-                            name="rating"
-                            value="4"
-                          /><label
-                            class="full"
-                            for="star4"
-                            title="Pretty good - 4 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3half"
-                            name="rating"
-                            value="3 and a half"
-                          /><label
-                            class="half"
-                            for="star3half"
-                            title="Meh - 3.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3"
-                            name="rating"
-                            value="3"
-                          /><label
-                            class="full"
-                            for="star3"
-                            title="Meh - 3 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2half"
-                            name="rating"
-                            value="2 and a half"
-                          /><label
-                            class="half"
-                            for="star2half"
-                            title="Kinda bad - 2.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2"
-                            name="rating"
-                            value="2"
-                          /><label
-                            class="full"
-                            for="star2"
-                            title="Kinda bad - 2 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1half"
-                            name="rating"
-                            value="1 and a half"
-                          /><label
-                            class="half"
-                            for="star1half"
-                            title="Meh - 1.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1"
-                            name="rating"
-                            value="1"
-                          /><label
-                            class="full"
-                            for="star1"
-                            title="Sucks big time - 1 star"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="starhalf"
-                            name="rating"
-                            value="half"
-                          /><label
-                            class="half"
-                            for="starhalf"
-                            title="Sucks big time - 0.5 stars"
-                          ></label>
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="shop-item">
-                  <div class="shop-content">
-                    <div
-                      class="shop-image-container uk-inline tw-onhover visible"
-                    >
-                      <img
-                        alt="Backpack In Black"
-                        src="assets/demo/shop/product-3.jpg"
-                      />
-                      <div class="uk-position-bottom">
-                        <a class="add-to-cart"
-                          ><i class="icon ion-bag"></i>Add to Cart</a
-                        >
-                      </div>
-                    </div>
-                    <h4>
-                      <a href="shop-single.html" class="shop-title"
-                        >Military Backpack</a
-                      >
-                    </h4>
-                    <a class="shop-category">Accessories</a>
-                    <div class="price">
-                      <span class="new-price">$36.00</span>
-                      <div class="shop-rating-container uk-clearfix">
-                        <fieldset class="rating">
-                          <input
-                            type="radio"
-                            id="star5"
-                            name="rating"
-                            value="5"
-                          /><label
-                            class="full"
-                            for="star5"
-                            title="Awesome - 5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4half"
-                            name="rating"
-                            value="4 and a half"
-                          /><label
-                            class="half"
-                            for="star4half"
-                            title="Pretty good - 4.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4"
-                            name="rating"
-                            value="4"
-                          /><label
-                            class="full"
-                            for="star4"
-                            title="Pretty good - 4 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3half"
-                            name="rating"
-                            value="3 and a half"
-                          /><label
-                            class="half"
-                            for="star3half"
-                            title="Meh - 3.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3"
-                            name="rating"
-                            value="3"
-                          /><label
-                            class="full"
-                            for="star3"
-                            title="Meh - 3 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2half"
-                            name="rating"
-                            value="2 and a half"
-                          /><label
-                            class="half"
-                            for="star2half"
-                            title="Kinda bad - 2.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2"
-                            name="rating"
-                            value="2"
-                          /><label
-                            class="full"
-                            for="star2"
-                            title="Kinda bad - 2 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1half"
-                            name="rating"
-                            value="1 and a half"
-                          /><label
-                            class="half"
-                            for="star1half"
-                            title="Meh - 1.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1"
-                            name="rating"
-                            value="1"
-                          /><label
-                            class="full"
-                            for="star1"
-                            title="Sucks big time - 1 star"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="starhalf"
-                            name="rating"
-                            value="half"
-                          /><label
-                            class="half"
-                            for="starhalf"
-                            title="Sucks big time - 0.5 stars"
-                          ></label>
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="shop-item">
-                  <div class="shop-content">
-                    <div
-                      class="shop-image-container uk-inline tw-onhover visible"
-                    >
-                      <img
-                        alt="Backpack In Black"
-                        src="assets/demo/shop/product-4.jpg"
-                      />
-                      <div class="uk-position-bottom">
-                        <a class="add-to-cart"
-                          ><i class="icon ion-bag"></i>Add to Cart</a
-                        >
-                      </div>
-                    </div>
-                    <h4>
-                      <a href="shop-single.html" class="shop-title"
-                        >Industry T-Shirt</a
-                      >
-                    </h4>
-                    <a class="shop-category">Clothing, Man</a>
-                    <div class="price">
-                      <span class="old-price">$30.00</span>
-                      <div class="shop-rating-container uk-clearfix">
-                        <fieldset class="rating">
-                          <input
-                            type="radio"
-                            id="star5"
-                            name="rating"
-                            value="5"
-                          /><label
-                            class="full"
-                            for="star5"
-                            title="Awesome - 5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4half"
-                            name="rating"
-                            value="4 and a half"
-                          /><label
-                            class="half"
-                            for="star4half"
-                            title="Pretty good - 4.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star4"
-                            name="rating"
-                            value="4"
-                          /><label
-                            class="full"
-                            for="star4"
-                            title="Pretty good - 4 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3half"
-                            name="rating"
-                            value="3 and a half"
-                          /><label
-                            class="half"
-                            for="star3half"
-                            title="Meh - 3.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star3"
-                            name="rating"
-                            value="3"
-                          /><label
-                            class="full"
-                            for="star3"
-                            title="Meh - 3 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2half"
-                            name="rating"
-                            value="2 and a half"
-                          /><label
-                            class="half"
-                            for="star2half"
-                            title="Kinda bad - 2.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star2"
-                            name="rating"
-                            value="2"
-                          /><label
-                            class="full"
-                            for="star2"
-                            title="Kinda bad - 2 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1half"
-                            name="rating"
-                            value="1 and a half"
-                          /><label
-                            class="half"
-                            for="star1half"
-                            title="Meh - 1.5 stars"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="star1"
-                            name="rating"
-                            value="1"
-                          /><label
-                            class="full"
-                            for="star1"
-                            title="Sucks big time - 1 star"
-                          ></label>
-                          <input
-                            type="radio"
-                            id="starhalf"
-                            name="rating"
-                            value="half"
-                          /><label
-                            class="half"
-                            for="starhalf"
-                            title="Sucks big time - 0.5 stars"
-                          ></label>
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                ipsum nec sagittis elit. Duis sed odio sit amet tincidunt auctor
+                ornare odio sed non mauris vitae erat consequat auctor.
+              </p>
+              <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra per inceptos himenaeos mauris in erat justo nullam ac
+                urna felis dapibus condimentum sit amet augue sed non. Neque
+                elit sed ut imperdiet nisi proin condimentum fermentum nunc
+                etiam pharetra erat sed fermentu feugiat velit mauris egestas
+                quam ut aliquam massa nisl quis neque.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <footer
-        class="uk-section uk-padding-remove-vertical uk-light"
-        style="background-color: #222222"
+        class="uk-section uk-section-secondary uk-padding-remove-vertical uk-light"
       >
         <div class="bottom-area">
           <div class="uk-container">
             <div
-              class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-medium"
+              class="uk-child-width-expand@m uk-child-width-1-1@s"
               data-uk-grid
               data-uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 200;"
             >
-              <div>
-                <div class="widget">
-                  <div class="tw-logo">
-                    <h3 class="site-name">
-                      <a href="#">Lovely</a>
-                    </h3>
-                  </div>
-                  <p>
-                    Duis sed odio sit amet nibh vulputate cursus sit amet mauris
-                    morbi accumsan ipsum velit nam nec tellus tincidunt auctor
-                    ornare odio sed non consequat auctor.
-                  </p>
-                  <div class="tw-socials">
-                    <a href="#"><i class="ion-social-facebook"></i></a>
-                    <a href="#"><i class="ion-social-instagram"></i></a>
-                    <a href="#"><i class="ion-social-pinterest"></i></a>
-                    <a href="#"><i class="ion-social-twitter"></i></a>
-                    <a href="#"><i class="ion-social-youtube"></i></a>
-                    <a href="#"><i class="ion-social-rss"></i></a>
-                  </div>
+              <div class="uk-width-1-1@m uk-width-1-4@l">
+                <div class="tw-logo">
+                  <h3 class="site-name">
+                    <a href="#">Lovely</a>
+                  </h3>
                 </div>
               </div>
 
               <div>
-                <div class="uk-padding-left">
-                  <div class="widget widget_recent_entries">
-                    <h3 class="widget-title"><span>Popular Posts</span></h3>
-                    <ul>
-                      <li>
-                        <a href="#">Suspendisse vulputate diam</a>
-                        <span class="tw-meta">January 22, 2017</span>
-                      </li>
-                      <li>
-                        <a href="#">Facilisis Nulla Elementum</a>
-                        <span class="tw-meta">January 22, 2017</span>
-                      </li>
-                      <li>
-                        <a href="#">Mauris pharetra interdum</a>
-                        <span class="tw-meta">January 22, 2017</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="widget">
-                <div class="uk-padding-left">
-                  <h3 class="widget-title"><span>Useful Links</span></h3>
-                  <ul>
-                    <li>
-                      <a href="#">About us</a>
-                    </li>
-                    <li>
-                      <a href="#">Services</a>
-                    </li>
-                    <li>
-                      <a href="#">News</a>
-                    </li>
-                    <li>
-                      <a href="#">Testimonails</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact Us</a>
-                    </li>
-                  </ul>
+                <div class="tw-element tw-box layout-2 custom-typography">
+                  <i class="et-map-pin uk-border-circle layout-2"></i>
+                  <h4>Location</h4>
+                  <p class="description">88, Orchard St, New York</p>
                 </div>
               </div>
 
               <div>
-                <div class="widget tw-contact-widget">
-                  <h3 class="widget-title"><span>Contact Info</span></h3>
-                  <ul>
-                    <li>
-                      <i class="ion-ios-location"></i>
-                      <a href="#"
-                        >88 Orchard St, New York, NY 111000, United States.</a
-                      >
-                    </li>
-                    <li>
-                      <i class="ion-android-call"></i>
-                      <a href="#">(001) 8686 234 432</a>
-                    </li>
-                    <li>
-                      <i class="ion-android-mail"></i>
-                      <a href="#">support@themewaves.com</a>
-                    </li>
-                    <li>
-                      <i class="ion-ios-world-outline"></i>
-                      <a href="#">www.themewaves.com</a>
-                    </li>
-                  </ul>
+                <div class="tw-element tw-box layout-2 custom-typography">
+                  <i class="et-phone uk-border-circle layout-2"></i>
+                  <h4>Call Us</h4>
+                  <p class="description">(001) 8686 234 432</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="tw-element tw-box layout-2 custom-typography">
+                  <i class="et-envelope uk-border-circle layout-2"></i>
+                  <h4>Email Us</h4>
+                  <p class="description">support@themewaves.com</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="footer-area footer-small">
+        <div class="uk-container"><hr /></div>
+
+        <div class="footer-area">
           <div class="uk-container">
             <div
               class="uk-flex-middle uk-child-width-1-1 uk-child-width-expand@m"
@@ -1698,6 +990,16 @@
             >
               <div class="copyright">
                 © Copyright 2017 - All Rights Reserved
+              </div>
+              <div class="uk-text-center">
+                <div class="tw-socials">
+                  <a href="#"><i class="ion-social-facebook"></i></a>
+                  <a href="#"><i class="ion-social-instagram"></i></a>
+                  <a href="#"><i class="ion-social-pinterest"></i></a>
+                  <a href="#"><i class="ion-social-twitter"></i></a>
+                  <a href="#"><i class="ion-social-youtube"></i></a>
+                  <a href="#"><i class="ion-social-rss"></i></a>
+                </div>
               </div>
               <div class="uk-text-right">
                 <a href="" data-uk-scroll
@@ -1712,9 +1014,6 @@
     <!-- .main-container close -->
     <script src="assets/js/jquery-3.2.0.min.js"></script>
     <script src="assets/js/jquery.easypiechart.min.js"></script>
-
-    <script src="assets/js/spectragram.min.js"></script>
-
     <script src="assets/js/uikit.min.js"></script>
     <script src="assets/js/uikit-icons.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>

@@ -6,7 +6,24 @@ namespace ProcessWire;
 $root = pages('/')->and(pages()->find("template=biz_card-type|mkt-materials|business-services|about"));
 
 $home = pages('/');
-$danhThiep = pages()->get("template=biz_card-type");
+$productTypes = pages()->get("template=product-type");
+$albumAnh = pages()->get("/album-anh/");
+$albumAnhItems = $albumAnh->children;
+
+$tranhAnh = pages()->get("/tranh-anh/");
+$tranhAnhItems = $tranhAnh->children;
+$phuKienTrinhBay = pages()->get("/phu-kien-trinh-bay/");
+$phuKienTrinhBayItems = $phuKienTrinhBay->children;
+
+$prices = pages()->get("template=prices");
+$pricesItems = $prices->children;
+
+$thietKe = pages()->get("template=design-page");
+$thietKeItems = $thietKe->children;
+
+$ve123in = pages()->get("/123in-photo/");
+$ve123inItems = $ve123in->children;
+
 //Tất cả danh mục của danh thiếp
 $bizCardCates = pages()->get("template=biz_card-categories")->children();
 
@@ -31,36 +48,6 @@ foreach ($menuSettingPage->nav_menu_repeaters as $item) {
 		$bizCardsByFinishList->add($item);
 	}
 };
-//Marketing meterial kiểu lập trình
-$postCardBySizes = pages()->find("template=postcard-by-size-prod");
-$postCardByPapers = pages()->find("template=postcard-by-paper-prod");
-$buuThiep = pages()->get("template=postcard-type");
-//Tờ rơi
-$flyerBySizes = pages()->find("template=flyer-by-size-prod");
-$flyerByPapers = pages()->find("template=flyer-by-paper-prod");
-$flyer = pages()->get("template=flyer-type");
-//sticker
-$sticker = pages()->get("template=sticker-type");
-$stickerProducts = pages()->find("template=sticker-product");
-//menu, poster, display
-$menus = pages()->get("template=menu-type");
-$posters = pages()->get("template=poster-type");
-$displays = pages()->get("template=display-type");
-//Văn phòng phẩm
-$invitations = pages()->get("template=invitation-type");
-$letterHead = pages()->get("template=letterhead-type");
-//xử lý letter head
-$letterHeadProducts = pages()->find("template=letterhead-type|letterhead-luxe");
-
-$noteCards = pages()->get("template=notecard-type");
-$greetingCards = pages()->get("template=greet_card-type");
-$complimentSlips = pages()->get("template=complm_slip-type");
-
-//xử lý bao thư: làm tiếp sau
-$envelope = pages()->get("template=envelope-type");
-
-//xử lý notebook: làm tiếp sau
-$notebook = pages()->get("template=notebook-type");
 
 //Dịch Vụ Doanh Nghiệp
 $bizServiceList = PageArray();
@@ -85,156 +72,97 @@ foreach ($menuSettingPage->nav_menu_repeaters as $item) {
 				<?php
 				?>
 			</li>
-			<li class="menu-item menu-item-has-children"><a href="<?= $danhThiep->url ?>"><?= $danhThiep->title ?></a>
-				<ul class="sub-menu uk-animation-fade">
-					<li class="menu-item menu-item-has-children"><a href="<?= $danhThiep->url ?>"><?= $danhThiep->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($bizCardsByPaperList as $item) {
-							?>
-								<li><a href="<?= $item->url_link ?>"><?= $item->title_line ?></a></li>
-							<?php
-							} ?>
-							<li class="uk-nav-divider"></li>
-							<?php
-							foreach ($bizCardsByFinishList as $item) {
-							?>
-								<li><a href="<?= $item->url_link ?>"><?= $item->title_line ?></a></li>
-							<?php
-							} ?>
-						</ul>
-					</li>
-					<li class="menu-item menu-item-has-children"><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Danh Thiếp Vuông</a>
-						<ul class="sub-menu uk-animation-fade">
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Vuông Nguyên Bản</a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Vuông Gân Chạm</a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Vuông Siêu Hạng</a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Vuông Tỏa Sáng</a>
-						</ul>
-					</li>
-					<li class="menu-item menu-item-has-children"><a href="<?= $danhThiep->url . "/danh-thiep-mini/" ?>">Danh Thiếp Mini</a>
-						<ul class="sub-menu uk-animation-fade">
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-mini/" ?>">Mini Nguyên Bản</a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-mini/" ?>">Mini Tỏa Sáng</a>
-						</ul>
-					</li>
-					<li class="uk-nav-divider"></li>
-					<li><a href="<?= $danhThiep->url ?>">Tất Cả Danh Thiếp</a></li>
-					<li class="uk-nav-divider"></li>
-					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-				</ul>
-			</li>
-			<!--danh thiếp HẾT-->
-
-			<!--ấn phẩm marketing-->
-			<li class="menu-item  menu-item-has-children"><a href="<?= $danhMktMat->url ?>"><?= $danhMktMat->title ?></a>
-				<ul class="sub-menu uk-animation-fade">
-					<li class="menu-item menu-item-has-children"><a href="<?= $buuThiep->url ?>"><?= $buuThiep->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($postCardBySizes as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-							<li class="uk-nav-divider"></li>
-							<?php
-							foreach ($postCardByPapers as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-						</ul>
-					</li>
-					<li class="menu-item menu-item-has-children"><a href="<?= $flyer->url ?>"><?= $flyer->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($flyerBySizes as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-							<li class="uk-nav-divider"></li>
-							<?php
-							foreach ($flyerByPapers as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-						</ul>
-					</li>
-					<li class="menu-item menu-item-has-children"><a href="<?= $sticker->url ?>"><?= $sticker->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($stickerProducts as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-
-						</ul>
-					</li>
-					<li><a href="<?= $menus->url ?>"><?= $menus->title ?></a></li>
-					<li><a href="<?= $posters->url ?>"><?= $posters->title ?></a></li>
-					<li><a href="<?= $displays->url ?>"><?= $displays->title ?></a></li>
-					<li class="uk-nav-divider"></li>
-					<li><a href="<?= $danhMktMat->url ?>">Tất Cả Ấn Phẩm MKT</a></li>
-					<li class="uk-nav-divider"></li>
-					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-				</ul>
-			</li>
-			<!--ấn phẩm marketing HẾT-->
-
-			<!--văn phòng phẩm-->
-			<li class="menu-item  menu-item-has-children"><a href="<?= $stationery->url ?>"><?= $stationery->title ?></a>
-				<ul class="sub-menu uk-animation-fade">
-					<li class="menu-item menu-item-has-children"><a href="<?= $sticker->url ?>"><?= $sticker->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($stickerProducts as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-							<?php
-							} ?>
-
-						</ul>
-					</li>
-					<li><a href="<?= $invitations->url ?>"><?= $invitations->title ?></a></li>
-					<li class="menu-item menu-item-has-children"><a href="<?= $letterHead->url ?>"><?= $letterHead->title ?></a>
-						<ul class="sub-menu uk-animation-fade">
-							<?php
-							foreach ($letterHeadProducts as $item) {
-							?>
-								<li><a href="<?= $item->url ?>"><?= $item->name_alias ?></a></li>
-							<?php
-							} ?>
-
-						</ul>
-					</li>
-					<li><a href="<?= $noteCards->url ?>"><?= $noteCards->title ?></a></li>
-					<li><a href="<?= $greetingCards->url ?>"><?= $greetingCards->title ?></a></li>
-					<li><a href="<?= $complimentSlips->url ?>"><?= $complimentSlips->title ?></a></li>
-					<li><a href="<?= $envelope->url ?>"><?= $envelope->title ?></a></li>
-					<li><a href="<?= $notebook->url ?>"><?= $notebook->title ?></a></li>
-
-					<li class="uk-nav-divider"></li>
-					<li><a href="<?= $stationery->url ?>">Tất Cả VPP</a></li>
-					<li class="uk-nav-divider"></li>
-					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-				</ul>
-			</li>
-			<!--văn phòng phẩm HẾT-->
-
-			<li class="menu-item  menu-item-has-children"><a href="<?= $bizService->url ?>"><?= $bizService->title ?></a>
+			<li class="menu-item menu-item-has-children"><a href="<?= $albumAnh->url ?>"><?= $albumAnh->title ?></a>
 				<ul class="sub-menu uk-animation-fade">
 					<?php
-					foreach ($bizServiceList as $item) {
+					foreach ($albumAnhItems as $item) {
 					?>
-						<li><a href="<?= $item->url_link ?>"><?= $item->title_line ?></a></li>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+					<?php
+					} ?>
+
+					<li class="uk-nav-divider"></li>
+					<li><a href="<?= $albumAnh->url ?>">Tất Cả Album Ảnh</a></li>
+					<li class="uk-nav-divider"></li>
+					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+				</ul>
+			</li>
+			<!--Album HẾT-->
+
+			<!--Tranh ảnh-->
+			<li class="menu-item menu-item-has-children"><a href="<?= $tranhAnh->url ?>"><?= $tranhAnh->title ?></a>
+				<ul class="sub-menu uk-animation-fade">
+					<?php
+					foreach ($tranhAnhItems as $item) {
+					?>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+					<?php
+					} ?>
+
+					<li class="uk-nav-divider"></li>
+					<li><a href="<?= $tranhAnh->url ?>">Tất Cả Tranh Ảnh</a></li>
+					<li class="uk-nav-divider"></li>
+					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+				</ul>
+			</li>
+			<!--tranh ảnh HẾT-->
+
+			<!--phụ kiện & trình bày-->
+			<li class="menu-item menu-item-has-children"><a href="<?= $phuKienTrinhBay->url ?>"><?= $phuKienTrinhBay->title ?></a>
+				<ul class="sub-menu uk-animation-fade">
+					<?php
+					foreach ($phuKienTrinhBayItems as $item) {
+					?>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+					<?php
+					} ?>
+
+					<li class="uk-nav-divider"></li>
+					<li><a href="<?= $phuKienTrinhBay->url ?>">Tất Cả Phụ Kiện & Trình Bày</a></li>
+					<li class="uk-nav-divider"></li>
+					<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+				</ul>
+			</li>
+			<!--phụ kiện & trình bày HẾT-->
+			<!--về giá-->
+			<li class="menu-item  menu-item-has-children"><a href="<?= $prices->url ?>"><?= $prices->title ?></a>
+				<ul class="sub-menu uk-animation-fade">
+					<li><a href="<?= $prices->url ?>"><?= $prices->title ?></a></li>
+					<?php
+					foreach ($pricesItems as $item) {
+					?>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
 					<?php
 					} ?>
 				</ul>
 			</li>
+			<!--về Thiết kế-->
+			<li class="menu-item  menu-item-has-children"><a href="<?= $thietKe->url ?>"><?= $thietKe->title ?></a>
+				<ul class="sub-menu uk-animation-fade">
+					<li><a href="<?= $thietKe->url ?>"><?= "Mẹo Thiết Kế" ?></a></li>
+					<?php
+					foreach ($thietKeItems as $item) {
+					?>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+					<?php
+					} ?>
+				</ul>
+			</li>
+
+			<!--về 123in-->
+			<li class="menu-item  menu-item-has-children"><a href="<?= $ve123in->url ?>"><?= $ve123in->title ?></a>
+				<ul class="sub-menu uk-animation-fade">
+
+					<?php
+					foreach ($ve123inItems as $item) {
+					?>
+						<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+					<?php
+					} ?>
+				</ul>
+			</li>
+
+			<!--Hỏi và đáp-->
 			<li class="menu-item">
 				<a href="<?= $question->url ?>"><?= $question->title ?></a>
 			</li>
