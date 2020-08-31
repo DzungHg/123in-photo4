@@ -204,8 +204,8 @@ blockquote:after {
 
 }
 .tw-logo .site-name a {
-  /* chỉnh color, trước inherit */
-  color: #151515;
+   color: inherit; 
+  /*color: #151515;*/
 }
 .tw-logo .site-name a:hover {
   text-decoration: none;
