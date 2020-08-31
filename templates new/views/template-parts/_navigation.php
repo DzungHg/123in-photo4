@@ -24,38 +24,16 @@ $thietKeItems = $thietKe->children;
 $ve123in = pages()->get("/123in-photo/");
 $ve123inItems = $ve123in->children;
 
-//Tất cả danh mục của danh thiếp
-$bizCardCates = pages()->get("template=biz_card-categories")->children();
 
-$danhMktMat = pages()->get("template=mkt-materials");
-$stationery = pages()->get("template=stationery");
-$bizService = pages()->get("template=business-services");
+
 $about =  pages()->get("template=about");
 $question =  pages()->get("template=question");
 
-$homeSubs = pages()->find("template=biz_card-cards|mkt-materials");
-$allBizCards = pages()->get("template=biz_card-products")->child();
+
 
 //Tạo các list menu nav top
 $menuSettingPage = pages()->get("template=web-settings");
-//Danh thiếp
-$bizCardsByPaperList = new PageArray();
-$bizCardsByFinishList = new PageArray();
-foreach ($menuSettingPage->nav_menu_repeaters as $item) {
-	if ($item->type == 'biz_cards_by_paper') {
-		$bizCardsByPaperList->add($item);
-	} else if ($item->type == 'biz_cards_by_finish') {
-		$bizCardsByFinishList->add($item);
-	}
-};
 
-//Dịch Vụ Doanh Nghiệp
-$bizServiceList = PageArray();
-foreach ($menuSettingPage->nav_menu_repeaters as $item) {
-	if ($item->type == 'biz_service') {
-		$bizServiceList->add($item);
-	}
-}
 
 //$topMenuClassText = $vars['class'];
 ?>
@@ -152,7 +130,7 @@ foreach ($menuSettingPage->nav_menu_repeaters as $item) {
 			<!--về 123in-->
 			<li class="menu-item  menu-item-has-children"><a href="<?= $ve123in->url ?>"><?= $ve123in->title ?></a>
 				<ul class="sub-menu uk-animation-fade">
-
+					<li><a href="<?= $ve123in->url ?>"><?="Về 123in Photo" ?></a></li>
 					<?php
 					foreach ($ve123inItems as $item) {
 					?>
@@ -185,52 +163,64 @@ foreach ($menuSettingPage->nav_menu_repeaters as $item) {
 			<button class="uk-modal-close-full" type="button" data-uk-close></button>
 			<div class="uk-light uk-height-viewport tw-mobile-modal uk-flex uk-flex-middle uk-flex-center" data-uk-scrollspy="target:>ul>li,>div>a; cls:uk-animation-slide-bottom-medium; delay: 150;">
 				<ul class="uk-nav-default uk-nav-parent-icon" data-uk-nav>
-					<li class="uk-parent"><a href="#"><?= $danhThiep->title ?></a>
+					<li class="uk-parent"><a href=""><?= $albumAnh->title ?></a>
 						<ul class="uk-nav-sub">
-							<li><a href="<?= $danhThiep->url ?>"><?= $buuThiep->title ?></a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-vuong/" ?>">Danh Thiếp Vuông</a>
-							<li><a href="<?= $danhThiep->url . "/danh-thiep-mini/" ?>">Danh Thiếp Mini</a>
-							<li class="uk-nav-divider"></li>
-							<li><a href="<?= $danhThiep->url ?>">Tất Cả Danh Thiếp</a></li>
-							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-						</ul>
-					</li>
-					<li class="uk-parent">
-						<a href="<?= $danhMktMat->url ?>"><?= $danhMktMat->title ?></a>
-						<ul class="uk-nav-sub">
-							<li><a href="<?= $buuThiep->url ?>"><?= $buuThiep->title ?></a></li>
-							<li><a href="<?= $flyer->url ?>"><?= $flyer->title ?></a></li>
-							<li><a href="<?= $sticker->url ?>"><?= $sticker->title ?></a></li>
-							<li><a href="<?= $menus->url ?>"><?= $menus->title ?></a></li>
-							<li><a href="<?= $posters->url ?>"><?= $posters->title ?></a></li>
-							<li><a href="<?= $displays->url ?>"><?= $displays->title ?></a></li>
-							<li class="uk-nav-divider"></li>
-							<li><a href="<?= $danhMktMat->url ?>">Tất Cả Ấn Phẩm MKT</a></li>
-							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-						</ul>
-					</li>
-					<li class="uk-parent">
-						<a href="<?= $stationery->url ?>"><?= $stationery->title ?></a>
-						<ul class="uk-nav-sub">
-							<li><a href="<?= $sticker->url ?>"><?= $sticker->title ?></a></li>
-							<li><a href="<?= $invitations->url ?>"><?= $invitations->title ?><span class="uk-label">Hot</span></a></li>
-							<li><a href="<?= $letterHead->url ?>"><?= $letterHead->title ?></a></li>
-							<li><a href="<?= $noteCards->url ?>"><?= $noteCards->title ?></a></li>
-							<li><a href="<?= $greetingCards->url ?>"><?= $greetingCards->title ?></a></li>
-							<li><a href="<?= $complimentSlips->url ?>"><?= $complimentSlips->title ?><span class="uk-label">Hot</span></a></li>
-							<li><a href="<?= $envelope->url ?>"><?= $envelope->title ?></a></li>
-							<li><a href="<?= $notebook->url ?>"><?= $notebook->title ?></a></li>
-							<li><a href="<?= $stationery->url ?>">Tất Cả VPP</a></li>
-							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
-						</ul>
-					</li>
-					<li class="uk-parent">
-						<a href="<?= $bizService->url ?>"><?= $bizService->title ?></a>
-						<ul class="uk-nav-sub">
+							
 							<?php
-							foreach ($bizServiceList as $item) {
+							foreach ($albumAnhItems as $item) {
 							?>
-								<li><a href="<?= $item->url_link ?>"><?= $item->title_line ?></a></li>
+								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+							<?php
+							} ?>
+
+							<li class="uk-nav-divider"></li>
+							<li><a href="<?= $albumAnh->url ?>">Tất Cả Album Ảnh</a></li>
+							<li class="uk-nav-divider"></li>
+							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#"><?= $tranhAnh->title ?></a>
+						<ul class="uk-nav-sub">
+							
+							<?php
+							foreach ($tranhAnhItems as $item) {
+							?>
+								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+							<?php
+							} ?>
+
+							<li class="uk-nav-divider"></li>
+							<li><a href="<?= $tranhAnh->url ?>">Tất Cả Tranh Ảnh</a></li>
+							<li class="uk-nav-divider"></li>
+							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#"><?= $phuKienTrinhBay->title ?></a>
+						<ul class="uk-nav-sub">
+							
+							<?php
+							foreach ($phuKienTrinhBayItems as $item) {
+							?>
+								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
+							<?php
+							} ?>
+
+							<li class="uk-nav-divider"></li>
+							<li><a href="<?= $phuKienTrinhBay->url ?>">Tất Cả Phụ Kiện & Trình Bày</a></li>
+							<li class="uk-nav-divider"></li>
+							<li><a href="/tat-ca-san-pham/">Tất Cả Sản Phẩm</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#"><?= $prices->title ?></a>
+						<ul class="uk-nav-sub">
+							<li><a href="<?= $prices->url ?>"><?= $prices->title ?></a></li>
+							<?php
+							foreach ($pricesItems as $item) {
+							?>
+								<li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
 							<?php
 							} ?>
 						</ul>

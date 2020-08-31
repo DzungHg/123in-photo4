@@ -97,15 +97,16 @@ $ws_page = pages()->get('/web-settings/');
 				<div class="uk-container">
 					<div class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-medium" data-uk-grid data-uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 200;">
 						<div>
+								<!-- Tóm tắt 123in photo -->
+								<?php echo files()->render('views/template-parts/_footer-123in-photo.php'); ?>
+						</div>
+						
+						<div>
 							<!-- product list -->
 							<?php echo files()->render('views/template-parts/_footer-prod-list.php'); ?>
 						</div>
 
-						<div>
-							<!-- danh sách giấy -->
-							<?php echo files()->render('views/template-parts/_footer-paper-stocks.php'); ?>
-						</div>
-
+						
 						<div class="widget">
 							<!-- về 123in -->
 							<?php echo files()->render('views/template-parts/_footer-about-123in.php'); ?>
