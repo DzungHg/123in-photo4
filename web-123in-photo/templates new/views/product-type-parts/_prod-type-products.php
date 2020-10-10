@@ -3,6 +3,27 @@
 namespace ProcessWire;
 //Tìm sản phẩm poplular 4 cái nhưng không được sticky to font vì nó đã trưng ra rồi.
 $popProducts = $page->children();
+$numOfProd = $popProducts->count;
+$ukClassP01 = ' uk-child-width-1-2@s ';
+$ukClassP02 = ' uk-child-width-1-4@s ';
+switch ($numOfProd)
+{
+    case 1:
+        $ukClassP01 =" uk-child-width-1-2@s ";
+        $ukClassP02 = " uk-child-width-1-4@m ";
+    break;
+    case 3:
+        $ukClassP01 =" uk-child-width-1-2@s ";
+        $ukClassP02 = " uk-child-width-1-3@m ";
+    break;
+    case 4:
+        $ukClassP01 =" uk-child-width-1-2@s ";
+        $ukClassP02 = " uk-child-width-1-4@m ";
+    break;
+
+};
+$ukClass ="tw-element uk-child-width-1-1". $ukClassP01. $ukClassP02 ;
+;
 ?>
 <section class="uk-section">
     <div class="uk-container">
@@ -14,7 +35,7 @@ $popProducts = $page->children();
                 <?= $page->prod_type_product_block->description ?>
             </p>
         </div>
-        <div class="tw-element uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid data-uk-scrollspy="target: > div; cls:uk-animation-slide-top-medium; delay: 300;">
+        <div class="<?=$ukClass?>" uk-grid data-uk-scrollspy="target: > div; cls:uk-animation-slide-top-medium; delay: 300;">
             <?php
             $imageUrl = '';
             foreach ($popProducts as $item) {
